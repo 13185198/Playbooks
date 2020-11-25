@@ -1,0 +1,10 @@
+---
+- hosts: WebServer
+  become: true
+  tasks:
+  - name: install traceroute
+    apt: 
+      name: traceroute
+      state: present
+      update_cache: yes
+    
